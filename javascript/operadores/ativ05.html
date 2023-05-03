@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //testando o operador <= que significa menor ou igual
+        var a = Number(prompt("digite um numero:"))
+        if (a <= 10) {
+            alert(`seu numero e menor ou igual a 10`)
+        } else {
+            alert(`seu numero e maior`)
+        }
+        
+        //testando o operador && que significa "e"
+        var n1 = Number(prompt("digite um numero:"))
+        var n2 = Number(prompt("digite outro numero:"))
+        if (n1 <= 10 && n2 >= 10) {
+            alert("correto")
+        } else {
+            alert("errado")
+        }
+
+        //testando o operador || que significa "ou"
+        var n3 = Number(prompt("digite um numero:"))
+        var n4 = Number(prompt("digite outro numero:"))
+        if (n1 <= 10 || n2 >= 10) {
+            alert("correto")
+        } else {
+            alert("errado")
+        }
+        
+        //testando o operador ternario ? :
+        var idade = Number(prompt("digite sua idade:"))
+        var r = idade >= 18 ? "MAIOR" : "MENOR"
+        alert(r)
+    </script>
+</body>
+</html>

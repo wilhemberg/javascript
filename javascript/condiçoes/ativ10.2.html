@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de nacionalidade</title>
+</head>
+<body>
+    <input type="text" id="nac">
+    <input type="button" value="olhar" id="olhar">
+    <div id="res">
+
+    </div>
+    <script>
+        var o = document.getElementById('olhar') 
+        o.addEventListener('click', nacional)
+
+        function nacional() {
+            var re = document.querySelector('div#res') //pegando a div res e botando na variavel re
+            var nacionalidade = document.querySelector('input#nac') //pegando o input e colocando na variavel nacionaliadde
+            var nacio = String(nacionalidade.value) //transformando para texto
+            if (nacio == 'brasil') { //codicional
+                re.innerHTML = `<p>sua nacionalidade e ${nacio}</p>` //mudando oque ta escrito na variavel re
+            } else if (nacio != 'brasil') {
+                re.innerHTML = "<p>voce e estrangeiro</p>"
+            }
+        }
+    </script>
+</body>
+</html>

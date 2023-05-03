@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo js</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            color: white;
+            font-size: 20px;
+            font-family: helvetica;
+        }
+    </style>
+</head>
+<body>
+    <h1>wilhemberg</h1>
+    <script>
+        // (number + number) faz adiçao
+        // (string + string) faz concatenaçao
+        var n1 = Number(prompt("Digite um numero:")); //conversão para numero inteiro
+        var n2 = Number(prompt("Digite outro numero:"));
+        var s = n1 + n2;
+        var ss = n1 - n2;
+        var m = n1 * n2;
+        var d = n1 / n2;
+        var con = confirm("voce quer ver a soma?");
+        if (con){
+            alert(`soma e ${s}`);
+        } else {
+            var con1 = prompt("voce quer ver qual operaçao?");
+            if (con1 == "-") {
+                alert(`sua subtraçao e ${ss}`);
+            } else if (con1 == "*") {
+                alert(`sua multiplicaçao e ${m}`);
+            }
+            else if (con1 == "/") {
+                alert(`sua divisao e ${d}`);
+            }
+        }
+    </script>
+</body>
+</html>

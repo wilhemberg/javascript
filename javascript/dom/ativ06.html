@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prinmeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font: normal 20pt arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>iniciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar o <strong>DOM</strong> em javascript.</p>
+    <div class="msg">clique em mim</div>
+
+    <script>
+        var cl = window.document.getElementsByTagName('div')[0] //pegando o elemento div do body e botando na variavel cl
+        var m = window.document.getElementById('msg') //slecionando a tag div pelo id
+        var d = window.document.getElementsByName('msg')[0] //Pegando a tag div pelo name
+        var corpo = window.document.body   //pegando o elemento body do html
+        var p1 = window.document.getElementsByTagName('p')[0] //pegando o primeiro elemento p da tag body
+        var d = window.document.querySelector('div.msg') // peegando a tag div pelo selector 
+        d.style.color = 'blue' //mudando a cor da variavel d para azul
+        d.innerText = 'oii' //mudando oque esta escrito na variavel d
+        p1.style.color = 'yellow' //colocando o p na cor amarela
+        corpo.style.background = 'green' // colocando o corpo com um fundo verde
+        corpo.style.color = 'white'  //colocando as letras do body com cor branca
+        corpo.style.font = 'normal 20pt arial' // aumentando o tamanho da letra do corpo e o estilo junto
+        m.style.color = 'blue' // mudando a cor da letra da tag div
+        corpo.style.fontFamily = 'arial'  //serve para mudar o estilo de fonte das letras do body
+    </script>
+</body>
+</html>

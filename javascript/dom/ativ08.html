@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando numeros</title>
+    <style>
+        body {
+            font: normal 20px arial;
+        }
+
+        #rs {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>somando valores</h1>
+    <input type="number" name="text1" id="text1"> + 
+    <input type="number" name="text2" id="text2">
+    <input type="button" value="somar" id="somar">
+    <div id="rs">
+        resultado
+    </div>
+
+    <script>
+        var a = document.querySelector('input#somar') //pegando o butao somar e colocando na variavel a
+        a.addEventListener('click', somar) //adicionando evento de click
+        function somar() { //criando funçao somar 
+            var tn1 = window.document.getElementById('text1') //pegando o valor do input e colocando na variavel tn1
+            var tn2 = window.document.querySelector('input#text2') //pegando o valor do input e colocando na variavel tn2
+            var n1 = Number(tn1.value) //mudando o tipo da variavel para numero
+            var n2 = Number(tn2.value) //mudando o tipo da variavel para numero
+            var res = document.getElementById('rs') //pegando a div resultado e colocando na variavel res
+            var soma = n1 + n2 //somando os valores das variaveis n1 e n2
+            res.innerText = `a soma e igual a ${soma}` //exibindo a soma
+        }
+    </script>
+</body>
+</html>

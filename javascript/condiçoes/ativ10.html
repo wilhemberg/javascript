@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de velocidade</title>
+</head>
+<body>
+    <input type="number" name="v1" id="v1">
+    <input type="button" value="olhar" id="btn">
+    <div id="res">
+        
+    </div>
+    <script>
+        var but = document.getElementById('btn') 
+        but.addEventListener('click', butt) //adicionando um evento na variavel but
+
+        function butt() { 
+        var re = document.querySelector('div#res') //pegando a div res e botando ela numa variavel re
+        var a = document.getElementById('v1') //pegando o id v1 e colocando na variavel a
+        var vel = Number(a.value) //transformando a variavel vel em numero
+        re.innerHTML = `<p>sua velocidade atual e de <strong>${vel} km/h</strong></p>` //reescrevendo a variavel re
+        if (vel > 60) { //condiçao
+            res.innerHTML += "voce esta multado por ultrapassar limite de velocidade"
+        } else {
+            res.innerHTML += "use sempre sinto de segurança"
+        }
+        }
+    </script>
+</body>
+</html>
